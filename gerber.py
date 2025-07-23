@@ -21,17 +21,17 @@ from ultralytics import YOLO
 from ultralytics.data.converter import convert_coco
 import matplotlib.pyplot as plt
 import numpy as np
-from shapely.geometry import box
+from shapely import box
 import os
 import cv2
 #https://github.com/ultralytics/JSON2YOLO
 #https://docs.ultralytics.com/datasets/segment/#supported-datasets
 
 # Load the model from a filepath
-model = YOLO("drive/MyDrive/Google_collab/300_AIOModel.pt")
+model = YOLO("300_AIOModel.pt")
 
 # Get a model prediction from an image
-results = model("drive/MyDrive/Google_collab/062.jpg")
+results = model("images/062.jpg")
 
 # model.names returns a dictionary {0: "L1", 1: "L2", 2: "Both"}
 class_names = model.names
