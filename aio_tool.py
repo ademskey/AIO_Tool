@@ -9,15 +9,19 @@ Original file is located at
 
 #!pip install ultralytics
 #!pip install roboflow
+#!pip install dotenv
 
 from roboflow import Roboflow
 from ultralytics import YOLO
+import os
+from dotenv import load_dotenv
 #https://github.com/ultralytics/JSON2YOLO
 #https://docs.ultralytics.com/datasets/segment/#supported-datasets
 
 # download our dataset from Roboflow in COCO format
-
-rf = Roboflow(api_key="aLekBnOIW0WqCpUVZqGZ")
+load_dotenv
+api_key = os.getenv("api_key")
+rf = Roboflow(api_key="api_key")
 project = rf.workspace("envoy").project("aio_seg")
 version = project.version(7)
 dataset = version.download("yolov8-obb")

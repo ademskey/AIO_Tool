@@ -7,14 +7,14 @@ Original file is located at
     https://colab.research.google.com/drive/1INK1F30vVfvY9uKKIWEShLXBsT2lpBwg
 """
 
-!pip install ultralytics
-!pip install roboflow
-!pip install matplotlib
-!pip install NumPy
-!pip install shapely
-!pip install gerber_writer
-!pip install pcb-tools
-!pip install opencv-python
+# !pip install ultralytics
+# !pip install roboflow
+# !pip install matplotlib
+# !pip install NumPy
+# !pip install shapely
+# !pip install gerber_writer
+# !pip install pcb-tools
+# !pip install opencv-python
 
 from roboflow import Roboflow
 from ultralytics import YOLO
